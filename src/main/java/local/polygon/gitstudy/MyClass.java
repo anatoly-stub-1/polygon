@@ -2,10 +2,17 @@ package local.polygon.gitstudy;
 
 public class MyClass
 {
+	private static final TextProvider LOREM = new Lorem();
+
 	public static void main(String[] args)
 	{
-		TextProvider lorem  = new Lorem();
-		String text = lorem.fetchText();
+		String text = fetchLoremText();
 		System.out.println(text);
+	}
+
+	private static String fetchLoremText()
+	{
+		String text = LOREM.fetchText();
+		return text;
 	}
 }
